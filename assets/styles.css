@@ -1,0 +1,38 @@
+:root{
+	--card-bg: #ffffff;
+	--card-border: #eef0f6;
+	--card-radius: 12px;
+	--text-dark: #333333;
+	--accent-blue: #1729a1;
+	--accent-pink: #f75273;
+	--muted: #6b7280;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;background:#f6f7fb;color:var(--text-dark);}
+main{max-width:960px;margin:28px auto;padding:24px}
+
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--card-radius);padding:16px;margin-bottom:18px}
+
+/* Timer card */
+.timer-card{max-width:380px;margin:18px auto;background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.timer-inner{display:flex;flex-direction:column;align-items:center;gap:12px}
+.timer-top{font-size:12px;color:var(--muted);letter-spacing:0.2px}
+
+.timer-row{display:flex;align-items:center;gap:10px}
+.timer-col{display:flex;flex-direction:column;align-items:center;width:73px}
+.timer-number{font-size:48px;line-height:48px;font-weight:600}
+.timer-number.minutes{color:var(--text-dark)}
+.timer-number.seconds{color:var(--accent-blue)}
+.timer-number.centis{color:var(--accent-pink)}
+.timer-label{font-size:10px;font-weight:500;letter-spacing:0.6px;margin-top:6px;color:var(--muted);text-transform:uppercase}
+.seconds-label{color:var(--accent-blue)}
+
+.timer-sep{font-size:20px;color:var(--muted);padding:4px 6px}
+
+@media (max-width:420px){
+	.timer-card{margin:12px;padding:12px}
+	.timer-number{font-size:40px}
+}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

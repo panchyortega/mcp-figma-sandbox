@@ -5,15 +5,9 @@
   <title>MCP Figma – Sandbox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Sandbox para probar Figma MCP y validar organización de diseño.">
-  <!-- (Opcional) Reset/normalize ligero -->
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
-    main { max-width: 960px; margin: 0 auto; padding: 24px; }
-    header, footer { background: #f6f7fb; padding: 16px 24px; }
-    h1 { font-size: 1.5rem; margin: 0 0 12px; }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
-  </style>
+  <!-- Fonts and styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
   <header>
@@ -30,13 +24,41 @@
         <li>Estructura simple y escalable</li>
       </ul>
     </section>
+
+    <!-- Timer card converted from the Figma design -->
+    <section class="timer-card" aria-label="Temporizador de muestra">
+      <div class="timer-inner">
+        <div class="timer-top">Tu respuesta más rápida</div>
+
+        <div class="timer-row" role="group" aria-label="Tiempo">
+          <div class="timer-col">
+            <div class="timer-number minutes" id="minutes">00</div>
+            <div class="timer-label">Minutos</div>
+          </div>
+
+          <div class="timer-sep">:</div>
+
+          <div class="timer-col">
+            <div class="timer-number seconds" id="seconds">07</div>
+            <div class="timer-label seconds-label">Segundos</div>
+          </div>
+
+          <div class="timer-sep">:</div>
+
+          <div class="timer-col">
+            <div class="timer-number centis" id="centis">23</div>
+            <div class="timer-label">Milisegundos</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <small>© 2025 Sandbox</small>
   </footer>
 
-  <!-- (Opcional) Tu JS -->
-  <!-- <script src="./assets/main.js" defer></script> -->
+  <!-- Main JS: demo timer logic -->
+  <script src="./assets/main.js" defer></script>
 </body>
 </html>
